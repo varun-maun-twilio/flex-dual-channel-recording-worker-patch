@@ -221,21 +221,20 @@ const handleAcceptedCall = async (task) => {
   console.debug('Waiting for customer and worker to join the conference');
   const participants = await waitForConferenceParticipants(task);
 
-  console.error("found all participants as",participants)
 
-  console.error('Check if you got the reservation in the',task);
 
-  /*
+  /* Original Code
   const participantLeg = participants.find(
-    (p) => p.participantType === REACT_APP_RECORD_CHANNEL && p._source.status==='joined'
+    (p) => p.participantType === REACT_APP_RECORD_CHANNEL 
   );
   */
 
+  // Modified Code to pick the current worker
   const participantLeg = participants.find(
     (p) => p.participantType === REACT_APP_RECORD_CHANNEL && p._source.status==='joined' && task.workerSid===p.workerSid
   );
 
-  console.error('Recorded Participant: ', participantLeg);
+
 
   if (!participantLeg) {
     console.warn(
