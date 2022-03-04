@@ -36,7 +36,7 @@ const mediaObj = {
 ```
 
 
-2. Fixes a bug in recording worker's recording in case of transfers
+2. Fixes a bug in recording additional worker's conversation leg in case of transfers
   
 ```
   /* Original Code which could get reference to workers who already left the coversation
