@@ -45,7 +45,7 @@ const mediaObj = {
   );
   */
 
-  // Modified Code to pick only the current current worker
+  // Modified Code to pick only the current worker
   const participantLeg = participants.find(
     (p) => p.participantType === 'worker' && p._source.status==='joined' && task.workerSid===p.workerSid
   );
