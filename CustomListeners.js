@@ -231,7 +231,7 @@ const handleAcceptedCall = async (task) => {
 
   // Modified Code to pick the current worker
   const participantLeg = participants.find(
-    (p) => p.participantType === REACT_APP_RECORD_CHANNEL && p._source.status==='joined' && task.workerSid===p.workerSid
+    (p) => p.participantType === 'worker' && p._source.status==='joined' && task.workerSid===p.workerSid
   );
 
 
