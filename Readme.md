@@ -31,6 +31,10 @@ const mediaObj = {
             ...reservationAttributes,
             ...newReservationAttributes,
           },
+          conversations: {
+            ...conversations,
+            media: [mediaObj],
+          }
         };
         break;
 ```
