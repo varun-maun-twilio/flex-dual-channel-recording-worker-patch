@@ -102,6 +102,10 @@ const addCallDataToTask = async (task, callSid, recording) => {
             ...reservationAttributes,
             ...newReservationAttributes,
           },
+          conversations: {
+            ...conversations,
+            media: [mediaObj],
+          }
         };
         break;
       case 'customer':
