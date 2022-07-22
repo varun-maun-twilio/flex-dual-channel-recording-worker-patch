@@ -94,7 +94,8 @@ const addCallDataToTask = async (task, callSid, recording) => {
         const newReservationAttributes = {};
         newReservationAttributes[reservationSid] = {
           media: [mediaObj],
-          worker:workerObj
+          worker:workerObj,
+          call_sid:callSid
         };
         newAttributes = {
           ...attributes,
